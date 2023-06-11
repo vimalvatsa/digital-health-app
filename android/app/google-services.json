@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1042433275341",
+    "project_id": "evododo-136ed",
+    "storage_bucket": "evododo-136ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042433275341:android:249a8bd33d3d4bbc038084",
+        "android_client_info": {
+          "package_name": "firebase.core"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042433275341-3a60ptj3b70c57ot0a60jucktu1bf9s5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYZ2hV4falk182DbMYk-tNcobBAW4PaNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042433275341-3a60ptj3b70c57ot0a60jucktu1bf9s5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
