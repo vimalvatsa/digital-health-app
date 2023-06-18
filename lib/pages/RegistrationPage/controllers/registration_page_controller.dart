@@ -100,3 +100,7 @@ class RegistrationPageController extends GetxController {
       return false;
     }
   }
+  
+  mixin obs {
+    
+  }

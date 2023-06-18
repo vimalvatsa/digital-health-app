@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-// import 'package:get/get.dart';
 import 'package:flutter_app_testing/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:get/get.dart';
 import 'package:flutter_app_testing/pages/RegistrationPage/controllers/registration_page_controller.dart';
 import '../../global/controllers/global_controller.dart';
 

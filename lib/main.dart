@@ -3,23 +3,24 @@ import 'dart:async';
 import 'package:flutter_app_testing/global/controllers/global_controller.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:flutter_app_testing/pages/LoginPage/LoginPage.dart';
 import 'package:flutter_app_testing/pages/PrescriptionPage/PrescriptionPage.dart';
 import 'package:flutter_app_testing/pages/RegistrationPage/registration_page.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase_op.dart';
+import 'firebase_options.dart';
 import 'pages/RegistrationPage/controllers/registration_page_controller.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Firebase.initializeApp(
+  await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+  runApp(child: MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
   final GlobalController globalController = Get.put(GlobalController());
   final HomePageController homePageController = Get.put(HomePageController());
   final RegistrationPageController registrationPageController = put();
@@ -31,6 +32,12 @@ class MyApp extends StatelessWidget {
       return false;
     }
 
+    Future<bool> getData() async {
+    globalController.user = globalController.auth.currentUser;
+    if (globalController.user == null) {
+      return false;
+    }
+    
     globalController.getProfile(
         globalController.usersRef, globalController.user);
 
